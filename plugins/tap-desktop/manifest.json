@@ -1,0 +1,57 @@
+{
+  "manifest_version": "0.3",
+  "name": "tap-desktop",
+  "display_name": "TAP - Total Audio Promo",
+  "version": "0.1.0",
+  "description": "Plan release campaigns, draft pitches, check progress and keep contacts tidy in your connected TAP workspace.",
+  "long_description": "TAP is an agent-assisted music PR platform for independent artists. This extension connects Claude Desktop to your TAP workspace: create or open a campaign, build a contact pool, draft and refine pitches, check outcomes and replies, and keep your contact list tidy. Review and approve your pitches in TAP; TAP sends what you approve.",
+  "author": {
+    "name": "Total Audio Promo",
+    "url": "https://totalaudiopromo.com"
+  },
+  "homepage": "https://totalaudiopromo.com",
+  "documentation": "https://totalaudiopromo.com/docs",
+  "support": "mailto:support@totalaudiopromo.com",
+  "icon": "icon.png",
+  "license": "LicenseRef-Proprietary",
+  "keywords": ["music", "pr", "promotion", "campaign", "radio", "press", "playlist"],
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"],
+      "env": {
+        "TAP_API_KEY": "${user_config.tap_api_key}"
+      }
+    }
+  },
+  "tools": [
+    { "name": "tap_workspace_overview", "description": "Campaigns, contacts and drafts waiting for approval." },
+    { "name": "tap_list_campaigns", "description": "List releases or campaigns running in the workspace." },
+    { "name": "tap_create_campaign", "description": "Start a release campaign." },
+    { "name": "tap_get_campaign", "description": "Release date, status and goal for a named campaign." },
+    { "name": "tap_search_contacts", "description": "Find a contact id by name or outlet." },
+    { "name": "tap_find_people", "description": "Find contacts matching a description." },
+    { "name": "tap_suggest_contacts", "description": "Suggest who else to pitch for a release." },
+    { "name": "tap_contact_insights", "description": "What TAP knows about a contact before pitching." },
+    { "name": "tap_draft_pitch", "description": "Draft a pitch for one contact." },
+    { "name": "tap_batch_draft_pitches", "description": "Draft pitches for several contacts at once." },
+    { "name": "tap_list_pitch_drafts", "description": "Pitches already drafted for a campaign." },
+    { "name": "tap_queue_pitch_review", "description": "Put a draft in front of the artist for review." },
+    { "name": "tap_get_outcomes", "description": "Coverage and replies logged for a release." },
+    { "name": "tap_get_approval_queue", "description": "What is waiting for the artist's approval." },
+    { "name": "tap_suggest_next_actions", "description": "What a campaign needs next." },
+    { "name": "tap_list_contacts", "description": "The artist's full contact list." },
+    { "name": "tap_update_contact", "description": "Correct a contact's route, name or detail." }
+  ],
+  "user_config": {
+    "tap_api_key": {
+      "type": "string",
+      "title": "TAP API key",
+      "description": "From TAP, under Settings > API Keys (starts tap_ak_). Used to connect this extension to your TAP workspace.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

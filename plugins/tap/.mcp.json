@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tap": {
+      "type": "http",
+      "url": "https://totalaudiopromo.com/api/mcp"
+    }
+  }
+}

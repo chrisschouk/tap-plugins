@@ -1,0 +1,15 @@
+{
+  "name": "tap-marketplace",
+  "description": "Public Claude Code plugins for Total Audio Promo (TAP), an agent-assisted music PR platform for independent artists.",
+  "owner": {
+    "name": "Total Audio Promo",
+    "url": "https://totalaudiopromo.com"
+  },
+  "plugins": [
+    {
+      "name": "tap",
+      "source": "./plugins/tap",
+      "description": "Plan release campaigns, draft pitches, check progress and keep contacts tidy in your connected TAP workspace. Review and approve your pitches in TAP; TAP sends what you approve."
+    }
+  ]
+}
