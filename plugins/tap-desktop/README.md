@@ -13,7 +13,7 @@ keep contacts tidy. Review and approve your pitches in TAP; TAP sends what you a
   package over stdio (`npx -y @totalaudiopromo/tap-mcp`) rather than bundling TAP's MCP source a
   second time, so this extension always runs the same server code as the hosted connector and the
   stdio instructions in `plugins/tap/README.md`.
-- `icon.png` - reused from `apps/tap/public/apple-touch-icon.png` (180x180 PNG).
+- `icon.png` - the TAP app icon (180x180 PNG).
 - `build.sh` - validates the manifest and packs `tap-desktop.mcpb` locally.
 
 ## Build and validate locally
