@@ -3,8 +3,8 @@
  * Thin launcher for the TAP MCP Bundle (Claude Desktop extension).
  *
  * The bundle format wants a server file it can point at directly, but the
- * real server is the published `@totalaudiopromo/tap-mcp` npm package, kept
- * in packages/tap-mcp of this monorepo. Duplicating that source into the
+ * real server is the published `@totalaudiopromo/tap-mcp` npm package.
+ * Duplicating that source into the
  * bundle would drift the moment either copy changed, so this file instead
  * execs the published package over stdio and forwards every event:
  * `npx -y @totalaudiopromo/tap-mcp`, inheriting stdio and the environment

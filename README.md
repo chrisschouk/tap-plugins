@@ -35,3 +35,8 @@ Claude Code plugin.
 Settings > Apps and Connectors > Advanced > Developer mode (enable it) > Add MCP server. Paste
 `https://totalaudiopromo.com/api/mcp` as the server URL. ChatGPT's developer mode servers follow
 the same MCP OAuth flow; a TAP sign-in prompt should appear the first time a tool is called.
+
+## Licence
+
+Proprietary rights reserved for this preview. You may install the plugin and extension to connect
+an assistant to your own TAP account; no other rights are granted. See `LICENSE`.
