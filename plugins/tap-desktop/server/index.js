@@ -26,7 +26,7 @@ child.on('exit', (code, signal) => {
   process.exit(code ?? 0);
 });
 
-child.on('error', (err) => {
+child.on('error', err => {
   console.error('[tap-mcp launcher] failed to start @totalaudiopromo/tap-mcp:', err);
   process.exit(1);
 });
